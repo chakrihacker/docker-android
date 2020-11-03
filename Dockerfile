@@ -66,6 +66,6 @@ RUN curl -sS https://dl.google.com/android/repository/${SDK_VERSION} -o /tmp/sdk
     && unzip -q -d ${ANDROID_HOME}/cmdline-tools /tmp/sdk.zip \
     && mv ${ANDROID_HOME}/cmdline-tools/cmdline-tools ${ANDROID_HOME}/cmdline-tools/latest \
     && cd ${ANDROID_HOME}/cmdline-tools \
-    && ls - al \
+    && ls -al \
     && rm /tmp/sdk.zip \
     && rm -rf ${ANDROID_HOME}/.android
