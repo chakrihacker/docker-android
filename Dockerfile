@@ -64,6 +64,7 @@ RUN curl -sS -L https://github.com/facebook/buck/releases/download/v${BUCK_VERSI
 RUN curl -sS https://dl.google.com/android/repository/${SDK_VERSION} -o /tmp/sdk.zip \
     && mkdir -p ${ANDROID_HOME}/cmdline-tools \
     && unzip -q -d ${ANDROID_HOME}/cmdline-tools /tmp/sdk.zip \
+    && cd ${ANDROID_HOME}/cmdline-tools \
     && ls -al \
     && rm /tmp/sdk.zip \
     && rm -rf ${ANDROID_HOME}/.android
